@@ -4,13 +4,15 @@
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="../jquery.contextmenu.js"></script>
     <link rel="stylesheet" href="../jquery.contextmenu.css">
+    <script src="myscripts.js"></script>
     <link rel="script" href="Menupopup">
-    <script>  
+  </head>
+      <script>  
       $(function() {
         $('#mythingy').contextPopup({
           title: 'My Popup Menu',
           items: [
-            {label:'Algum item',     icon:'icons/shopping-basket.png',         action:function(onclick='http://portal.mackenzie.br/') { alert('clicked 1') } },
+            {label:'Algum item',     icon:'icons/shopping-basket.png',         action:function abrelink() { window.open('http://portal.mackenzie.br/') } },
             {label:'Outra coisa', icon:'icons/receipt-text.png',                action:function() { alert('clicked 2') } },
             {label:'Blah Blah',     icon:'icons/book-open-list.png',              action:function() { alert('clicked 3') } },
             null, // divider
@@ -24,7 +26,6 @@
         });
       });
     </script>
-  </head>
   <body style="background-color: gray; color:#ffffff; font-family:arial,sans-serif">
 
     <div id="mythingy" style="width:500px; height: 500px; margin: 10px; border:2px dashed #666666; padding:6px">
@@ -34,3 +35,7 @@
       Clique com o botão direito fora da caixa para mostrar o menu padrão do navegador (se você estiver tentando exibir-fonte, clique direito aqui)
   </body>
 </html>
+
+
+
+
